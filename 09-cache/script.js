@@ -31,7 +31,7 @@ var getTemplate = (function() {
 $(function() {
   $('button').click(function() {
 
-    var name = $(this).html(); // Bob か mary か John
+    var name = $(this).html(); // Bob か Mary か John
 
     // テンプレート文字列を取得
     getTemplate().then(function(templateString) {

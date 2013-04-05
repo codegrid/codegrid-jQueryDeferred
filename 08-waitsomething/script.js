@@ -16,7 +16,7 @@ $(function() {
   domReady.resolve(); // 解決
 });
 
-$.when(getTemplate(), domReady).then(function(template) {
+$.when(getTemplate(), $.ready).then(function(template) {
   // NAME を Bob に差し替え
   var str = template.replace(/NAME/, 'Bob');
   $('body').append(str);
