@@ -14,7 +14,7 @@ var getChildIdFromUserId = function(userId) {
   return defer.promise();
 };
 
-var getChildNameFromUserId = function(childId) {
+var getChildNameFromChildId = function(childId) {
   var defer = $.Deferred();
   $.ajax({
     url: 'childInfo.json',
@@ -33,7 +33,7 @@ var getChildNameFromUserId = function(childId) {
 
 var alertChildName = function(userId) {
   getChildIdFromUserId(userId) // 1つめのリクエスト
-    .then(getChildNameFromUserId) // 2つめのリクエスト
+    .then(getChildNameFromChildId) // 2つめのリクエスト
     .then(function(childName) {
       alert('子供の名: ' + childName);
     }, function(errorMessage) {
