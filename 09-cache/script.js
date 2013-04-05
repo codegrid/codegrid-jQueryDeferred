@@ -16,9 +16,9 @@ var getTemplate = (function() {
       url: 'template.txt',
       dataType: 'text'
     }).then(function(text) {
-      defer.resolve(text);
+      defer.resolve(text); // 解決
     }, function() {
-      defer.reject();
+      defer.reject(); // 却下
     });
 
     cachedDefer = defer; // キャッシュに保存しておく

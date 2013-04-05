@@ -1,9 +1,9 @@
 var doSomething = function() {
   var defer = $.Deferred();
   setTimeout(function() {
-    defer.reject(); // NGだったことを告げる
+    defer.reject(); // 却下
   }, 2000);
-  return defer.promise();
+  return defer.promise(); // プロミスを作って返す
 };
 
 $(function() {

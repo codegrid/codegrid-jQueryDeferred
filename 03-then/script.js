@@ -1,8 +1,8 @@
 var doSomething = function() {
   var defer = $.Deferred();
   setTimeout(function() {
-    //defer.resolve(); // OKだったことを告げる
-    defer.reject(); // NGだったことを告げる
+    //defer.resolve(); // 解決
+    defer.reject(); // 却下
   }, 2000);
   return defer.promise();
 };

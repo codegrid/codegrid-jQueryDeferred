@@ -1,8 +1,9 @@
 var getGreetingMessage = function() {
-  return $.ajax({
+  var jqXHR = $.ajax({
     url: 'message.txt',
     dataType: 'text'
-  }).promise();
+  });
+  return jqXHR.promise(); // プロミスを作って返す
 };
 
 $(function() {

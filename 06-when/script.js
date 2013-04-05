@@ -7,9 +7,9 @@ var getFatherName = function(userId) {
     dataType: 'text',
     data: { userId: userId }
   }).then(function(text) {
-    defer.resolve(text);
+    defer.resolve(text); // 解決
   }, function() {
-    defer.reject('父親の名前の取得に失敗しました');
+    defer.reject('父親の名前の取得に失敗しました'); // 却下
   });
   return defer.promise();
 };
@@ -21,9 +21,9 @@ var getMotherName = function(userId) {
     dataType: 'text',
     data: { userId: userId }
   }).then(function(text) {
-    defer.resolve(text);
+    defer.resolve(text); // 解決
   }, function() {
-    defer.reject('母親の名前の取得に失敗しました');
+    defer.reject('母親の名前の取得に失敗しました'); // 却下
   });
   return defer.promise();
 };
@@ -35,9 +35,9 @@ var getChildName = function(userId) {
     dataType: 'text',
     data: { userId: userId }
   }).then(function(text) {
-    defer.resolve(text);
+    defer.resolve(text); // 解決
   }, function() {
-    defer.reject('子供の名前の取得に失敗しました');
+    defer.reject('子供の名前の取得に失敗しました'); // 却下
   });
   return defer.promise();
 };

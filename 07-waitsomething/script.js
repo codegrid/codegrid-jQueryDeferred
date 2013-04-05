@@ -4,16 +4,16 @@ var getTemplate = function() {
     url: 'template.txt',
     dataType: 'text'
   }).then(function(text) {
-    defer.resolve(text);
+    defer.resolve(text); // 解決
   }, function() {
-    defer.reject();
+    defer.reject(); // 却下
   });
   return defer.promise();
 };
 
 var domReady = $.Deferred();
 $(function() {
-  domReady.resolve();
+  domReady.resolve(); // 解決
 });
 
 $.when(getTemplate(), domReady).then(function(template) {

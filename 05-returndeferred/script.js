@@ -5,9 +5,10 @@ var getGreetingMessage = function(name) {
     dataType: 'text'
   }).then(function(text) {
     text = text.replace(/NAME/, name);
-    defer.resolve(text);
+    defer.resolve(text); // 解決
   }, function() {
-    defer.reject('メッセージの取得に失敗しました');
+    // 失敗した場合はエラーメッセージを返す
+    defer.reject('メッセージの取得に失敗しました'); // 却下
   });
   return defer.promise();
 };
